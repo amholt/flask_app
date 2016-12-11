@@ -10,7 +10,7 @@
                 <!-- if name is set, add it. Otherwise don't -->
                 {% if businesses %}
                     <h1>{% for business in businesses %}
-                            {{ business.name }}
+                            {{ business.name }}<br>
                         {% endfor %}</h1>
                     <a href="{{ url_for('index') }}">Look up another address</a>
                 {% else %}
