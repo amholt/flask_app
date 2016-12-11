@@ -8,8 +8,10 @@
         <div class="jumbotron">
             <div class="container">
                 <!-- if name is set, add it. Otherwise don't -->
-                {% if forecast %}
-                    <h1>{{ forecast }}!</h1>
+                {% if businesses %}
+                    <h1>{% for business in businesses %}
+                            {{ business.name }}
+                        {% endfor %}</h1>
                     <a href="{{ url_for('index') }}">Look up another address</a>
                 {% else %}
                     <h1>Hello! Where do you live?</h1>
@@ -20,6 +22,9 @@
                         <input type="submit" value="Submit" class="btn btn-primary">
                     </form>
                 {% endif %}
+
+                
+
                 <a href="{{ url_for('about') }}">About this project</a>
             </div>
         </div>

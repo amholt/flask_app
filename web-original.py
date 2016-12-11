@@ -24,9 +24,7 @@
 #	Hit CTRL+C to close server, then re-run "python web.py" in the correct directory.
 
 from flask import Flask, render_template, request
-import yelp_api2
-from yelp.client import Client
-from yelp.oauth1_authenticator import Oauth1Authenticator
+import weather
 import os   # use this to import your secret keys
 app = Flask(__name__)
 
@@ -35,13 +33,13 @@ def index():
     # request.values returns a dictionary, incl. any values of variable 'address'
     # add the .get so that you don't get an error if someone forgot to add it
     address = request.values.get('address')
-    businesses = None
+    forecast = None
     if address:
-    	businesses = yelp_api2.get_businesses(address)
+    	forecast = weather.get_weather(address)
     # render_template loads template, & passes value of name through
     # 2nd forecast defined above,
     # 1st forecast is what it's called w/i template (use the same name)
-    return render_template('index.html', businesses=businesses)
+    return render_template('index.html', forecast=forecast)
 
 @app.route("/about.html")
 def about():
