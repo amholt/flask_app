@@ -11,9 +11,9 @@
                 {% if businesses %}
                     <h1>Here are Yelp's top 3 recommendations for food:</h1>
                     <p>{% for business in businesses %}
-                            <li>{{ business.name }} with {{ business.rating }} rating, located at {{ business.address }}</li>
+                            <li>{{ business.name }} with rating: {{ business.rating }} and phone: {{ business.phone }}</li>
                         {% endfor %}</p>
-                    <a href="{{ url_for('index') }}">Look up another address</a>
+                    <a href="{{ url_for('index') }}">Look up another address</a><br>
                 {% else %}
                     <h1>Hello! Where do you live?</h1>
                     <form action="/" class="form-inline">
@@ -26,7 +26,7 @@
 
                 
 
-                <br><a href="{{ url_for('about') }}">About this project</a>
+                <a href="{{ url_for('about') }}">About this project</a>
             </div>
         </div>
     </body>
