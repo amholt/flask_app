@@ -14,10 +14,6 @@ load_dotenv(find_dotenv())
 
 def get_businesses(location, term):
 	auth = Oauth1Authenticator(
-		# consumer_key="Q1MS_LQivTFHlAdBGKGd-A",
-		# consumer_secret="8j5w2ZH9sJIvqfofebK4tII-1aA",
-		# token="0ltlG4A-6L9p49WUJRkDpVaQB0wuIjuU",
-		# token_secret="gZSsP6Ps5A6HP9XWAJQ42oIXqBc"
 		consumer_key=os.environ['CONSUMER_KEY'],
 		consumer_secret=os.environ['CONSUMER_SECRET'],
 		token=os.environ['TOKEN'],
