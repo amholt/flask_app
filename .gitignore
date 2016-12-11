@@ -12,6 +12,8 @@
 #	git commit -m "Updated .gitignore"	# always need a saved message
 # 	git push
 
+# in terminal, push code to heroku, then open code:
+#	 git push heroku master
 
 .DS_Store
 

@@ -34,7 +34,7 @@ def index():
 def about():
     return render_template('about.html')
 
+# tell Heroku how to run your app
 if __name__ == "__main__":
-    # tell Heroku how to run your app
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
