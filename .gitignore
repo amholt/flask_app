@@ -1,10 +1,16 @@
-# in terminal:
+# in terminal, initialize git and upload files:
 #	git init
 #	git add -A
 #	git config --global user.email "anna.hg@hired.com"
 #	git commit -m "First commit"
 #	git remote add origin https://github.com/amholt/flask_app.git
 #	git push -u origin master
+
+# in terminal, update file ".gitignore" in git, then push to git:
+#	git add -A
+#	git status		# just to check
+#	git commit -m "Updated .gitignore"	# always need a saved message
+# 	git push
 
 
 .DS_Store
