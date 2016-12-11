@@ -37,7 +37,7 @@ def index():
     address = request.values.get('address')
     businesses = None
     if address:
-    	businesses = yelp_api2.get_businesses(address)
+    	businesses = yelp_api2.get_businesses(address,'food')
     # render_template loads template, & passes value of name through
     # 2nd forecast defined above,
     # 1st forecast is what it's called w/i template (use the same name)
