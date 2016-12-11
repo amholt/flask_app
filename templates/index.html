@@ -9,10 +9,10 @@
             <div class="container">
                 <!-- if name is set, add it. Otherwise don't -->
                 {% if businesses %}
-                    <h1>Here are Yelp's top 3 recommendations for food:<br>
-                        {% for business in businesses %}
+                    <h1>Here are Yelp's top 3 recommendations for food:</h1>
+                    <p>{% for business in businesses %}
                             {{ business.name }}<br>
-                        {% endfor %}</h1>
+                        {% endfor %}</p>
                     <a href="{{ url_for('index') }}">Look up another address</a>
                 {% else %}
                     <h1>Hello! Where do you live?</h1>
@@ -26,7 +26,7 @@
 
                 
 
-                <a href="{{ url_for('about') }}">About this project</a>
+                <br><a href="{{ url_for('about') }}">About this project</a>
             </div>
         </div>
     </body>
